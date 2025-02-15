@@ -16,9 +16,4 @@ lines
 (b) example
 (c) example
 
-2. Question 2
-after a line
-break
-etc.
-Until you reach  
-the end  
+continue after line break
