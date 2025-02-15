@@ -12,8 +12,8 @@ End of answer key$$
 **1.** Question 1...  
 can go on for multiple  
 lines  
-(a) example
-(b) example
+(a) example\
+(b) example\
 (c) example
 
 continue after line break
