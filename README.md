@@ -2,7 +2,7 @@
 Tool for practicing cse232 practice exams (Michigan State University) in a streamlined way.
 
 All practice exams provided (from Autumn 2024)
-Format for making your own practice exams  
+Format for making your own practice exams (can use given files as examples)   
 
 Answer key started$$  
 1 (b)  
