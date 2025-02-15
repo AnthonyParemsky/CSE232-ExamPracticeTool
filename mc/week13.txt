@@ -1,0 +1,94 @@
+Answer key started$$
+1 (g)
+2 (c)
+3 (c)
+4 (e)
+5 (e)
+6 (a)
+7 (f)
+End of answer key$$
+1. What is the term for a function that invokes
+itself (with different arguments)?
+(a) reflection
+(b) overloaded
+(c) overrided
+(d) algorithm
+(e) repeated
+(f) complex
+(g) recursion
+
+2. Which CSE course focuses on the design of
+algorithms and data structures?
+(a) CSE 232
+(b) CSE 350
+(c) CSE 331
+(d) CSE 335
+(e) CSE 300
+(f) CSE 231
+(g) CSE 325
+
+3. Which CSE course will teach you further
+C++ material (including inheritance and
+smart pointers)?
+(a) CSE 232
+(b) CSE 331
+(c) CSE 335
+(d) CSE 231
+(e) CSE 300
+(f) CSE 350
+(g) CSE 325
+
+4. Why are there multiple different sort algorithms in use despite them returning the
+same answer?
+(a) Certain sort algorithms perform better on smaller data sets.
+(b) Certain sort algorithms are easier to
+implement.
+(c) Certain sort algorithms have other,
+useful secondary characteristics, like
+stability.
+(d) Certain sort algorithms perform better on larger sequences.
+(e) All of the above
+
+5. Which of the following is most likely to have
+the greatest impact on the performance of
+your code?
+(a) The structure of the project (length of
+functions, number of files, and lines of
+code).
+(b) The degree of documentation and test
+suite of the project.
+(c) The hardware (CPU and/or graphics
+card) that the program is running on.
+(d) The programming language of the
+project.
+(e) The choice of which algorithm and
+data structures to use.
+
+6. Which of the following are benefits provided
+by smart pointers over raw/naked pointers?
+(a) They can release the resource when
+they fall out of scope
+(b) They can be dereferenced multiple
+times in the same function
+(c) They can refer to dynamically allocated memory
+(d) They can support operator-> and
+operator.
+(e) They can refer to existing objects that
+are local in scope
+(f) They can refer to multiple objects simultaneously
+
+7. Why are static and global variables not
+taught before the last week of instruction?
+(a) Because they use interrupts the debugger and thus are difficult to troubleshoot
+(b) Because they are very complex and
+shouldn’t be used until a mastery of
+RAII has been acquired
+(c) Because they lead to very inefficient
+code
+(d) Because they don’t work nicely with
+dynamically allocated memory leading to heap-overflow if not initialized
+correctly
+(e) Because they can’t be used in member functions and hence have limited
+utility
+(f) Because they are rarely needed and
+lead to bad code habits

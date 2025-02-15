@@ -1,0 +1,303 @@
+Answer key started$$
+1 (c)
+2 (e)
+3 (a)
+4 (e)
+5 (d)
+6 (d)
+7 (e)
+8 (b)
+9 (f)
+10 (b)
+11 (a)
+12 (d)
+13 (c)
+14 (g)
+15 (f)
+16 (a)
+17 (b)
+18 (e)
+19 (b)
+20 (e)
+21 (d)
+22 (c)
+23 (c)
+24 (g)
+25 (e)
+End of answer key$$
+1. A const member function has what property that distinguishes it from a non-const
+member function?
+(a) It returns a const object.
+(b) It is a getter member function.
+(c) It can be called on const objects.
+(d) It returns a reference to a const object.
+(e) It has only const parameters.
+(f) All of the above.
+
+2. Which of the following exceptions will be
+raised if allocated memory is not deleted?
+(a) std::runtime error
+(b) std::logic error
+(c) std::bad alloc
+(d) std::system error
+(e) None of the above.
+
+3. Which of the following member functions
+should usually be marked const?
+(a) Getters
+(b) Setters
+(c) Copy Constructors
+(d) Destructors
+(e) All of the above.
+(f) None of the above.
+
+4. For a class named Thing, what is the type
+of the implicit this?
+(a) Thing * const
+(b) Thing
+(c) const Thing * const
+(d) Thing *
+(e) Depends on if the member function is
+const.
+
+5. Which of the following is true about memory leaks?
+(a) They are caused by using up too much
+memory on the stack.
+(b) They alter the output from a program.
+(c) They are avoided by using dynamic
+memory allocation.
+(d) They result in a program using more
+memory than needed.
+(e) All of the above.
+
+6. Which of the following classes should have
+a custom destructor?
+(a) A class that utilizes private data
+members.
+(b) A class with a custom default constructor.
+(c) A class that has an STL container as
+a data member.
+(d) A class that stores its data on the
+heap.
+
+7. Why do operator+=, operator<< and
+operator= return a reference and take a
+reference as their first parameter instead of
+regular objects?
+(a) So that they can be used as operators.
+(b) Because they can only work on references, not values.
+(c) To ensure that they don’t raise exceptions.
+(d) To ensure that they don’t change
+their arguments.
+(e) So that they can be chained.
+
+8. Which of the following is FALSE about the
+operator+ function member?
+(a) It should have a const return type in
+indicate that its result should not be
+changed.
+(b) It should return a reference instead of
+an object to avoid a needless copy.
+(c) It should have const after the parameter list to indicate that it doesn’t
+change its object.
+(d) It should take const parameters because it doesn’t need to change them.
+(e) All of the above are true.
+
+9. If the following line is valid code, which of
+the following must be true?
+int x = this->func();
+(a) There is a class with a member function named func.
+(b) func’s return type is int.
+(c) The above line must be in a member
+function.
+(d) (a) and (b)
+(e) (b) and (c)
+(f) (a) and (c)
+(g) (a), (b), and (c)
+(h) None of the above
+
+10. Why do we recommend wrapping calls to
+a STL container’s size method in a static
+cast? Example:
+static_cast<int>(vec.size())
+(a) Because STL algorithms only work
+with iterators.
+(b) Because working with unsigned ints is
+hazard prone.
+(c) Because size returns an int.
+(d) Because the compiler will not allow
+ints and unsigned ints in the same
+math operation.
+(e) Because the static cast checks that
+the value is a non-negative value.
+
+11. g++ supports various optimization flags
+that sometimes result in faster run times
+for program compiled with that flag (e.g.
+-O1, -O2, and -O3. What is the downside
+to using such flags?
+(a) They often increase compilation time.
+(b) They only work on programs that
+don’t use iostreams.
+(c) They alter the results of your program.
+(d) They use more processors on the computer.
+(e) None of the above.
+
+12. Setter member functions can be distinguished from getter member functions by which of the following properties?
+(a) Setter functions may be void member
+functions
+(b) Setter functions have parameters
+(c) Setter functions are not const member
+functions
+(d) All of the above
+
+13. In the expression (5 + 6) the value 11 is
+returned. What is returned by the expression (std::cin >> x)?
+(a) A bool value (true or false) indicating if the extraction operation was
+successful
+(b) A function pointer to operator>> so
+that the operation can be captured
+(c) std::cin, to enable additional inputs
+(d) None of the above
+
+14. The fact that the following code prints
+7 tells you what about std::vector’s
+operator[] method?
+vector<int> v {0, 1, 2};
+v[0] = 7;
+cout << v[0];
+(a) That the version of operator[] that
+was called returns a reference
+(b) That the operator[] has a non-const
+member function implementation
+(c) That the operator[] has an implementation that can accept an int as
+an argument
+(d) (a) and (b)
+(e) (a) and (c)
+(f) (b) and (c)
+(g) (a), (b), and (c)
+(h) None of the above
+
+15. Which of the following invoke the default constructor for the class named
+Thing?
+(a) Thing t = x;
+(b) Thing t{x};
+(c) Thing t(x);
+(d) Thing t(&x);
+(e) All of the above
+(f) None of the above
+
+16. Const member functions have what capability that non-const member functions don’t
+have?
+(a) They can be called on const objects
+(b) They can take const arguments
+(c) They allow getters to access private
+attributes
+(d) They don’t make copies of their arguments
+(e) They guarantee to the compiler that
+they won’t change any of their arguments
+
+17. Why should you delete dynamically allocated memory?
+(a) Because the copy constructor requires
+it
+(b) To avoid memory usage increasing unbounded
+(c) To ensure that variables aren’t shadowed
+(d) To allow arrays to grow in size
+(e) None of the above
+
+18. What is the difference between using
+(this->jump()) versus just (jump()) inside
+a member function?
+(a) Using this ensures that the jump
+method doesn’t change the object
+(b) Using this will work even if jump is
+private, whereas the latter will not
+(c) Using this is faster as the program
+doesn’t need to determine how many
+times jump will be called
+(d) Using this is preferred as the latter
+option isn’t part of the C++ Standard
+(e) There is no functional difference
+
+19. Which of the following causes memory
+leaks?
+(a) Copying pointers and references.
+(b) Not delete’ing new’ed memory.
+(c) Allowing variables to fall out of scope.
+(d) Accessing uninitialized memory.
+(e) None of the above.
+
+20. What does marking a function member
+const indicate?
+(a) That it can be invoked on const objects.
+(b) That it doesn’t change the object it
+belongs to.
+(c) That it returns a const object.
+(d) All of the above.
+(e) Only (a) and (b).
+(f) Only (a) and (c).
+(g) Only (b) and (c).
+(h) None of the above.
+
+21. When is an object’s destructor called?
+(a) When the block of that local variable
+ends.
+(b) When the delete operator is called on
+that object.
+(c) When that object is assigned to.
+(d) (a) and (b)
+(e) (a) and (c)
+(f) (b) and (c)
+(g) All of the above.
+(h) None of the above.
+
+22. Assuming 32-bit ints, how many bytes of
+memory does the following code leak?
+for (int i = 0; i <= 3; ++i) {
+  if (i) int * ptr = new int[i];
+}
+(a) 72
+(b) 48
+(c) 24
+(d) 12
+(e) 9
+(f) 6
+(g) 3
+(h) 0
+
+23. What does the -Werror flag do in g++?
+(a) It turns on all error checking during
+compilation
+(b) It turns on error checking for the use
+of while loops
+(c) It transforms all warnings into errors
+to make them halt compilation
+(d) It turns on warnings in case you have
+any errors in your code
+
+24. The language feature of using the same operator many times in a single statement, for
+example:
+apple = banana = carrot;
+or
+cin >> apple >> banana >> carrot;
+Is called what?
+(a) Repetition
+(b) Linkage
+(c) Assignment
+(d) Implicit Execution
+(e) Fall-through
+(f) Iteration
+(g) Chaining
+
+25. The principle of RAII dictates that which
+of the following actions should be taken?
+(a) Resources should be acquired in an
+object’s constructor.
+(b) Resources should be accessed in an
+object’s getters.
+(c) Resources should be altered in an object’s setters.
+(d) Resources should be released in an object’s destructor.
+(e) (a) and (d) are correct.
+(f) (b) and (c) are correct.
+(g) All are correct.
+(h) None are correct.

@@ -1,0 +1,676 @@
+Answer key started$$
+1 (a)
+2 (d)
+3 (d)
+4 (e)
+5 (c)
+6 (a)
+7 (c)
+8 (a)
+9 (e)
+10 (a)
+11 (b)
+12 (d)
+13 (d)
+14 (b)
+15 (b)
+16 (c)
+17 (b)
+18 (d)
+19 (d)
+20 (d)
+21 (f)
+22 (a)
+23 (f)
+24 (d)
+25 (a)
+26 (a)
+27 (c)
+28 (e)
+29 (b)
+30 (b)
+31 (c)
+32 (d)
+33 (d)
+34 (b)
+35 (c)
+36 (b)
+37 (c)
+38 (f)
+39 (b)
+40 (c)
+41 (d)
+42 (a)
+43 (b)
+44 (d)
+45 (d)
+46 (c)
+47 (e)
+48 (a)
+49 (g)
+End of answer key$$
+1. What advantage is there in returning a reference type (i.e. string & Func(string &
+x);) instead of a regular type (i.e. string
+Func(string & x);)?
+(a) It avoids an unnecessary copy.
+(b) It allows the function to return a
+pointer to a dynamically allocated array instead of a statically allocated
+one.
+(c) They are identical to each other.
+(d) It allows the return type to alter the
+object that is created in the function.
+(e) None of the above.
+
+2. When are automatic variables (variables
+that arent dynamically allocated) destroyed?
+(a) When the loop iteration ends.
+(b) When they are no longer needed.
+(c) When are passed to a function.
+(d) When they fall out of scope.
+(e) When their copy constructor is called.
+(f) When they are deleted.
+
+3. Why should you declare a parameter const
+even though the compiler doesnt require it?
+(a) To allow the code to compile faster.
+(b) To allow the function to be used in a
+debugger.
+(c) To avoid unnecessary copies.
+(d) To allow the compiler to enforce a
+guarantee made by the developer.
+(e) To enforce runtime assertions.
+(f) All of the above
+
+4. Why do you need to use the first set
+of parentheses in the following expression
+(presuming x is a pointer to a vector)?
+(*x).clear();
+(a) Because otherwise the behavior would
+not be the same as operator->.
+(b) Because they are needed to avoid a
+syntax error.
+(c) Because without them, the compiler
+would think you are trying to call
+clear on a pointer.
+(d) Because the dot operator has a higher
+precedence than the dereference operator.
+(e) All of the above.
+
+5. What is the difference between x and y?
+for (auto x : vec) ...
+for (auto & y : vec) ...
+(a) x is a copy of each element, where as
+y is a reference.
+(b) If y is altered, the element in vec
+changes. Not so for x.
+(c) Both of the above are true.
+(d) None of the above are true.
+
+6. Why should you never return the address
+(a pointer) to a local variable?
+(a) Because the local variable will be destroyed when it goes out of scope (often when the function ends).
+(b) Because the addresses of objects
+change within functions depending on
+if there are loops.
+(c) Because doing so makes unnecessary
+copies of the objects involved.
+(d) Because it leaks memory.
+(e) (a) and (b)
+(f) (b) and (c)
+(g) (c) and (d)
+(h) (b) and (d)
+
+7. What advantage is there in dynamically allocating an array?
+(a) Then the array can hold elements of
+any size.
+(b) Then the array can be resized with
+the std::resize function.
+(c) Then the size of the array doesn’t
+need to be known at compile time.
+(d) Then the array will not decay into a
+pointer when passed as an argument.
+(e) Two of (a-d) are correct.
+(f) Three of (a-d) are correct.
+
+8. What is wrong with the following function?
+int * Add(int * a, int * b) {
+  int c = (*a) + (*b);
+  return &c;
+}
+(a) It returns a pointer to a local variable
+that will deleted when the function returns.
+(b) It returns the wrong type, it should
+return a pointer, but instead returns
+a reference.
+(c) It tries to add the addresses of two
+pointers.
+(d) It tries to dereference non-pointer
+types.
+(e) Nothing is wrong.
+
+9. What is the the type of x?
+const auto x = new string[10];
+(a) const string * const
+(b) const string
+(c) const string *
+(d) string
+(e) string * const
+(f) string *
+
+10. Redirection allows which of the following
+operations to be performed?
+(a) Making a program that writes to standard output instead write to a file.
+(b) The ability to search for a file on the
+file system and add it to the places
+that the terminal will find when attempting to run executable programs.
+(c) Changing the address of a pointer to
+instead point at a different value (especially with respect to streams).
+(d) The inclusion of libraries that havent
+been installed yet.
+(e) The ability to use istreams and ostreams to redirect characters from one
+source to another.
+(f) The ability to push commits from a
+local repository to a remote one.
+
+11. When is a dynamically allocated object destroyed?
+(a) When it falls out of scope.
+(b) When it is deleted.
+(c) When it is assigned to.
+(d) None of the above.
+
+12. The pipe character, ’|’, on the command
+line indicates what should happen to the
+commands around it?
+(a) The standard input from the previous
+command should be redirected to the
+standard output of the next command
+(b) A logical ”or” operation should be
+performed to combine the outputs
+(c) That output from both commands
+should be printed to the screen
+(d) The standard output from the previous command should be redirected to
+the standard input of the next command
+
+13. When should you NOT dereference a
+pointer?
+(a) When its value is null.
+(b) When its value has been deleted
+(c) When its value has been allocated
+with new
+(d) (a) and (b)
+(e) (a) and (c)
+(f) (b) and (c)
+(g) (a), (b), and (c)
+(h) None of the above
+
+14. Why should a function not return a reference to a local variable?
+(a) Because the local variable will then be
+copied unnecessarily
+(b) Because the variable will be destroyed
+when the function call returns
+(c) Because the local variables are always
+dynamically allocated, returning reference to them means the caller is
+then responsible for deleting them
+(d) (a) and (b)
+(e) (a) and (c)
+(f) (b) and (c)
+(g) (a), (b), and (c)
+(h) None of the above
+
+15. The arrow operator (e.g. x->y), is equivalent to which of the following expressions?
+(a) *x.y
+(b) (*x).y
+(c) ((*x.)y
+(d) *(x.y)
+(e) None of the above
+
+16. What does the [ ] of a delete [ ] x; indicate?
+(a) That x is subscriptable.
+(b) That x is a data structure.
+(c) That x is an array.
+(d) None of the above.
+
+17. What will change if struct is changed to
+class in the following?
+struct Test {
+  double gpa;
+public:
+  string name;
+private:
+  string comments;
+}
+(a) All three data members will become
+private.
+(b) Nothing, it still won’t compile because of a missing semicolon.
+(c) The data member gpa will be made
+private.
+(d) The data member gpa will be made
+public.
+(e) All three data members will become
+public.
+
+18. Which of the following describe dynamically allocating memory of type long and
+of size size?
+(a) new long lptr = *long[size];
+(b) long lptr = new *long[size];
+(c) new long *lptr = long[size];
+(d) long *lptr = new long[size];
+(e) long *lptr = new *long[size];
+
+19. Where are local variables are allocated?
+(a) Free memory
+(b) Heap
+(c) Permanent storage area
+(d) Stack
+
+20. Choose the statement which is FALSE
+with respect to dynamic memory allocation.
+(a) Used for unpredictable memory requirements
+(b) Memory is allocated in a less structured area of memory, known as heap
+(c) Allocated memory can be changed
+during the run time of the program
+based on the requirement of the program
+(d) Dynamically allocated memory is automatically deleted when it falls out
+of scope.
+(e) None of the above
+
+21. The expression x->y() is equivalent to
+what?
+(a) *((x.y)())
+(b) *((x(.)y))
+(c) (*x()).y
+(d) *(x.y())
+(e) (*x.y)()
+(f) (*x).y()
+
+22. Why should read-only parameters be
+marked as const references?
+(a) It avoids making a copy and stops the
+function body from altering the argument.
+(b) It allows the function to change
+the argument within the body, but
+doesn’t affect performance.
+(c) It doesn’t affect how the program
+runs, nor its performance, but helps
+make it clear to the programmer that
+a variable should not be changed.
+(d) It disallows pointers from being made.
+(e) It makes changing the argument
+throw a std::const exception.
+(f) None of the above.
+
+23. Which of the following parameters would
+copy their argument?
+Example for option (a):
+void func(string a) {...}
+(a) string a
+(b) string & b
+(c) string const c
+(d) string const & d
+(e) (a) and (b) would both copy their argument.
+(f) (a) and (c) would both copy their argument.
+(g) (c) and (d) would both copy their argument.
+(h) None of the parameters would copy
+their argument.
+(i) All of the parameters would copy
+their argument.
+
+24. What does the following Unix instruction
+do?
+./a.out < a.txt > b.txt
+(a) It is equivalent to (./a.out <
+a.txt) && (a.txt > b.txt).
+(b) It compares the exit code from a.out
+to the exit code from a.txt (less than)
+and b.txt (greater than).
+(c) It compares the sizes of the files of
+a.out to a.txt (less than) and b.txt
+(greater than).
+(d) It redirects the contents of a.txt to be
+the input for a.out and redirects the
+output from a.out into b.txt.
+(e) It runs a.out, then runs a.txt, then
+runs b.txt.
+(f) None of the above are true.
+
+25. What is implied when a function has a nonconst reference for a parameter?
+(a) That the function may change that
+argument
+(b) That the function may make a copy
+of the argument
+(c) That the function may read from that
+argument
+(d) That the function may swap that argument
+(e) None of the above
+
+26. cat is a program that prints out a given file
+to standard output. sort is a program that
+outputs the lines it is given in sorted order. Which of the following commands will
+output lines of the file “text.txt” in sorted
+order?
+(a) cat text.txt | sort
+(b) sort < cat text.txt
+(c) cat text.txt > sort
+(d) sort << cat text.txt
+(e) cat text.txt >> sort
+(f) sort | cat text.txt
+
+27. Given the following function, which one of
+the following claims is true?
+int Boost(int & in) {
+  return ++in * 2;
+}
+(a) if x is 1 and I call Boost(x), x will
+remain as 1
+(b) If x is 0 and I call Boost(x), x will
+then be 2
+(c) If x is 1 and I call Boost(x) it will
+return 4
+(d) If x is 0 and I call Boost(x) it will
+return 1
+
+28. How is the operator (||) typically used in
+C++?
+(a) To redirect a value to a file.
+(b) To output a boolean value to the console
+(c) To link the execution of statements so
+they occur simultaneously.
+(d) To test if two boolean expressions are
+both true
+(e) To test if either of two boolean expressions is true
+
+29. How could you redirect the contents of the
+file input.txt to be used as inputs to the
+executable file my_exe, while also redirecting the outputs to the file output.txt?
+(a) output.exe < ./my_exe <
+input.exe
+(b) ./my_exe < input.txt >
+output.txt
+(c) input.txt | ./my_exe |
+output.txt
+(d) input.txt > ./my_exe >
+output.txt
+(e) input.txt | ./my_exe >
+output.txt
+
+30. Imagine that we have a program named
+”generate_primes” that writes prime numbers to standard output. And another program named ”find_palindromes” that can
+read numbers from standard input and
+write to standard output. If we wanted to
+connect these programs so that the output
+from ”generate_primes” was used as the input to ”find_palindromes”, which of the following commands would accomplish that?
+(a) cat generate_primes
+find_palindromes
+(b) generate_primes |
+find_palindromes
+(c) cp generate_primes
+find_palindromes
+(d) generate_primes >
+find_palindromes
+(e) generate_primes >>
+find_palindromes
+
+31. If the following program outputs ”apple
+APPLE”, what type must Capitalize’s first
+parameter be?
+string text = "apple"
+cout << text << ’ ’;
+Capitalize(text);
+cout << text;
+(a) None of the above allow the behavior
+demonstrated.
+(b) string
+(c) string &
+(d) string *
+
+32. What are the uses of non-const reference
+parameters in functions instead of just using regular pass-by-value?
+(a) They can be used to modify the values in the original variables that were
+passed in as arguments.
+(b) They can be used to ”return” additional values to the caller (separate
+from the return value).
+(c) Neither of the above are true.
+(d) Both of the above are true.
+
+33. How do you avoid a function argument from
+being copied (i.e., pass-by-value) in a function call?
+(a) All of the above
+(b) Declare the function parameter as
+auto.
+(c) Declare the function parameter as
+const.
+(d) Declare the function parameter as a
+reference.
+
+34. What is the output of this program?
+#include <string>
+#include <iostream>
+int AddOne(int number) {
+	return number + 1;
+}
+std::string AddOne(std::string
+const & str) {
+	return str + "1";
+}
+int main() {
+	char c = ’a’;
+	// ASCII value 97
+	std::cout << AddOne(c) <<
+std::endl;
+}
+(a) Compilation error, no matching function AddOne(char)
+(b) 98
+(c) a1
+(d) b
+
+35. What will be the output of the following
+code?
+void foo(int *p) {
+	std::cout << *p <<
+std::endl;
+}
+int main() {
+	int i = 10, *p = &i;
+	foo(++p);
+}
+(a) 11
+(b) Compile time error
+(c) Some garbage value or error
+
+36. What does the > character mean in the following terminal command?
+a.out > abc
+(a) It compares the sizes of the files. If
+a.out is larger than abc, it returns
+true.
+(b) None of the above
+(c) It does the ”greater-than” operation
+on two variables. If the a.out variable is larger than abd, then it returns
+true.
+(d) It compares the contents of the two
+files. If the contents of a.out are
+greater alphabetically than abc, then
+it returns true.
+(e) It compares the exit code of the two
+files. If a.out returns a larger exit code
+than abc, then it returns true.
+
+37. Why should you declare a parameter const
+even though the compiler doesn’t require it?
+(a) To enforce runtime assertions
+(b) To allow the code to compile faster
+(c) To allow the compiler to enforce the
+promise of constness
+(d) To avoid unnecessary copies
+
+38. In order for file redirection to work, what
+must a program do?
+(a) It must be executed by an IDE
+(b) It must terminate only after the EndOf-File is encountered
+(c) It must be compiled with the -r flag
+(d) It must be an executable C++ program
+(e) It must have a using directive for the
+std namespace
+(f) It must read and/or write to the standard file streams
+(g) It must conform to the language standard and the style guide
+
+39. Why shouldn’t you return a reference to a
+local variable?
+(a) Because making a reference will cause
+an unnecessary copy to be created.
+(b) Because local variables will be destroyed when they go out of scope.
+(c) Because local variables must be const
+and references could alter them.
+(d) Because it violates the property of
+”Independence”
+(e) Because a function’s return type can’t
+have type modifiers.
+(f) Because references can only be initialized, not declared.
+(g) Wrong, you should return references
+to local variables.
+
+40. What is wrong with the following function?
+bool Func(std::string s) {
+  while (!s.empty()) {
+	if (s.at(0) == ’a’) {
+	  return true;
+	}
+	s = s.substr(1);
+  }
+}
+(a) ! isn’t an operator in C++.
+(b) Strings don’t have a substr member
+function
+(c) Control can reach the end of a nonvoid function
+(d) A string can’t be used in a conditional
+expression
+(e) Nothing is wrong with the function
+
+41. What does the ampersand (&) character allow the last two function definitions in section 1.8 (on page 16 of the required textbook) that wouldn’t be possible if it was
+absent?
+(a) It allows the functions to access the
+argument without copying it.
+(b) It allows the functions to change the
+argument that they were called with.
+(c) It allows the functions to access member functions of the vector class.
+(d) (a) and (b) are both correct.
+(e) (b) and (c) are both correct.
+(f) (a) and (c) are both correct.
+(g) All three statements are true
+(h) None of the statements are true
+
+42. If a function needs read-only access to a
+large argument like a long string, what type
+should it usually have? Example provided
+below:
+void print(??? x) {
+  cout << x;
+}
+(a) A const reference type, like string
+const &
+(b) A pointer to const type, like string
+const *
+(c) A const pointer to const type, like
+string const * const
+(d) A regular type, like string
+(e) A pointer type, like string *
+(f) A const pointer type, like string *
+const
+(g) A reference type, like string &
+
+43. What is wrong with the following code?
+char * c_style_string =
+  new char[12]{’a’, ’b’, ’\0’};
+\\...
+delete c_style_string;
+(a) The C-Style string doesn’t end with a
+null character.
+(b) The wrong version of delete was used.
+(c) The array is initialized with too few
+values.
+(d) The type of c_style_string is
+wrong.
+(e) All of the above are issues with the
+code above.
+
+44. When does a dynamically allocated object’s
+lifetime end?
+(a) When the pointer it was assigned to
+falls out of scope.
+(b) When the new operator is called
+again.
+(c) When the function it was allocated in
+returns.
+(d) When it is deleted.
+(e) Never. The object dies only when the
+program ends.
+
+45. The at member function of std::string
+returns what type given that the comment
+in the following code is true?
+string s{"abc"};
+s.at(0) = ’A’;
+\\s is now "Abc"
+(a) char const &
+(b) char *
+(c) char
+(d) char &
+(e) None of the above
+
+46. Why should functions never return references to local variables?
+(a) Because it causes unnecessary copies
+to be made for every function call.
+(b) Because references can only be used
+for parameters, not for return types.
+(c) Because local variables are destroyed
+when the function call ends.
+(d) Because dynamically allocated memory returns a pointer, not a reference.
+(e) None of the above
+
+47. For a class named Tree, what is the return
+type of its constructor?
+(a) Tree const &
+(b) Tree
+(c) Tree &
+(d) Tree const
+(e) None of the above
+
+48. The following expression is equivalent to
+which of the following options?
+*x.clear()
+(a) *(x.clear())
+(b) (*x).clear()
+(c) x->clear()
+(d) (a) and (b) are both correct.
+(e) (b) and (c) are both correct.
+(f) (a) and (c) are both correct.
+(g) All 4 expressions are equivalent
+(h) None of the expressions are equivalent
+
+49. Which line in the following example will
+cause a compiler error?
+#include <string>
+#include <iostream>
+using std::string;
+struct Test {
+  double gpa;
+public:
+  string name;
+private:
+  string comments;
+};
+int main() {
+  Test t;
+  t.gpa = 2.5;
+  t.name = "Josh";
+  std::cout << t.comments;
+}
+(a) using std::string;
+(b) string name;
+(c) };
+(d) Test t;
+(e) t.gpa = 2.5;
+(f) t.name = "Josh";
+(g) std::cout << t.comments;
+(h) Two of the above lines cause compiler
+errors.
+(i) None, the above code would compile.

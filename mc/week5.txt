@@ -1,0 +1,428 @@
+Answer key started$$
+1 (a)
+2 (b)
+3 (a)
+4 (d)
+5 (d)
+6 (b)
+7 (b)
+8 (d)
+9 (e)
+10 (e)
+11 (b)
+12 (a)
+13 (f)
+14 (c)
+15 (e)
+16 (d)
+17 (b)
+18 (d)
+19 (d)
+20 (e)
+21 (a)
+22 (a)
+23 (a)
+24 (e)
+25 (e)
+26 (c)
+27 (e)
+28 (a)
+29 (a)
+30 (e)
+31 (a)
+32 (a)
+33 (d)
+End of answer key$$
+1. What will be the output of the following
+code?
+void foo(int *p) {
+  cout << *p << endl;
+  (*p)++;
+}
+int main() {
+  int i = 10;
+  foo(&i);
+}
+(a) 10
+(b) Some garbage value
+(c) 11
+(d) Compile time error
+(e) Run time error
+(f) Segmentation fault/code crash
+
+2. What will be the output of the following
+code?
+void foo(int *p) {
+  cout << *p << endl;
+}
+int main() {
+  int i = 10, *p = &i;
+  foo(p++);
+}
+(a) Compile time error
+(b) 10
+(c) Some garbage value
+(d) Segmentation fault/code crash
+(e) Run time error
+(f) 11
+
+3. What will be the output of the following
+code?
+void foo(int *p) {
+  cout << *p << endl;
+}
+int main() {
+  int i = 10, *p = &i;
+  foo(++p);
+}
+(a) Some garbage value or error
+(b) 11
+(c) Compile time error
+(d) 10
+
+4. What will be the output of the following
+code?
+void foo(int *p) {
+  p = new int(2);
+  cout << *p << ’ ’;
+}
+int main() {
+  int i = 97, *p = &i;
+  foo(&i);
+  cout << *p << endl;
+}
+(a) Compile time error
+(b) Segmentation fault/code crash
+(c) Run time error
+(d) 2 97
+(e) 2 2
+
+5. What will be the output of the following
+code?
+void foo(int **p) {
+  *p = new int(2);
+  cout << **p << ’ ’;
+}
+int main() {
+  int i = 97, *p = &i;
+  foo(&p);
+  cout << *p << endl;
+}
+(a) Segmentation fault/code crash
+(b) 2 97
+(c) Run time error
+(d) 2 2
+(e) Compile time error
+
+6. What will be the output of the following
+code?
+int main() {
+  int a[3] = {1, 2, 3};
+  int *p = a;
+  cout << p << ’-’ << a;
+}
+(a) Two different addresses are printed
+(b) Same address is printed twice
+(c) Compile time error
+(d) Run time error
+(e) undefined
+
+7. What is the purpose of a breakpoint in a
+debugger?
+(a) It causes the while, for, or switch
+statement to cease its execution and
+continue on the next line.
+(b) It pauses the execution of the program when it is encountered.
+(c) It intentionally crashes the program
+so that a core dump of useful information is produced.
+(d) It indicates a place where the program
+is performing undefined behavior or
+causing a compiler time error.
+
+8. When running gdb, what does the ”up”
+command do? This was covered in lab.
+(a) It adds the current value to the stack
+of accessed variables.
+(b) It moves you to the previously executed statement.
+(c) It prints the backtrace.
+(d) It brings you to the function call that
+invoked the current function.
+
+9. When compiling code for running with gdb,
+what command line argument should be
+used?
+(a) -o
+(b) -c
+(c) -x
+(d) -d
+(e) -g
+
+10. What is the primary downside to using
+#pragma once instead of the traditional
+header guards?
+(a) It interferes with the gdb debugger.
+(b) It doesn’t work for function templates.
+(c) It only works if each header file has
+its own name.
+(d) gcc/g++ doesnt support it.
+(e) It isnt part of the C++ standard.
+(f) It disables compiler warnings.
+(g) None of the above.
+
+11. What is the purpose of header guards?
+(a) To allow templates to be instantiated.
+(b) To avoid redefinition errors.
+(c) To allow for faster compilation.
+(d) To ensure that a class’s privacy is
+maintained.
+(e) None of the above
+
+12. Which of the following files should be compiled?
+(a) Implementation Files
+(b) Header Files
+(c) Object Files
+(d) (a) and (b)
+(e) (a), (b), and (c)
+
+13. What does the -g flag do when compiling
+with g++?
+(a) It causes the compiler to run faster
+(at the cost of more memory usage).
+(b) It does nothing.
+(c) It indicates that warnings should be
+enabled.
+(d) It specifies that the GNU compiler
+should be used.
+(e) It instructs the compiler to check for
+memory issues (like leaks).
+(f) None of the above.
+
+14. What is the term for the place in one’s
+code that a debugger is instructed to pause
+at?
+(a) stopline
+(b) pause-resume location
+(c) breakpoint
+(d) continue
+(e) None of the above
+
+15. If a function wants to use arguments to “return” output values in addition to the regular return statement, what type modifiers
+should be used?
+(a) The arguments should be passed as
+non-const reference
+(b) The arguments should be passed as
+const reference
+(c) The arguments should be passed as a
+pointer
+(d) (a) and (b) both work
+(e) (a) and (c) both work
+(f) (b) and (c) both work
+(g) All of (a), (b), and (c) work
+(h) No type modifiers need to be used
+
+16. What does the -g flag do when compiling
+with g++?
+(a) It allows for a greater level of optimization, meaning that the code
+should in principal run faster
+(b) It checks for adherence to the google
+style guide and warns about deviations
+(c) It switches to using the GNU compiler
+option so the code will be open source
+(d) It indicates that debugging information should be included in the executable
+(e) None of the above
+
+17. Why are using declarations a bad idea in
+library headers?
+(a) It isn’t bad, one should put their using
+declarations in the header.
+(b) Because every file including that
+header will get the declarations.
+(c) Using declarations increases redundancy as they much be included for
+each function that uses the library.
+(d) Because headers can’t use namespaces.
+(e) Because the header should be explicit
+about its dependencies.
+(f) Because it is redundant, the implementation files will already have the
+declarations.
+
+18. What is the cause of the following error
+message?
+In file included from
+cpp_unit_test:-12:
+secret_messages/redact.cpp:5:8:
+error: redefinition of
+std::__cxx11::string
+redact_all_chars(string const &)
+(a) The redact_all_chars function generates undefined behavior.
+(b) The redact_all_chars function tries
+to change its const reference parameter.
+(c) The header for the redact_all_chars
+function hasn’t been included in the
+main file.
+(d) There is more than one implementation of the redact_all_chars function.
+(e) There is a type error in the
+redact_all_chars function.
+(f) None of the above.
+
+19. When is it better to do a namespace
+merge (using std::cout; cout << ...)
+instead of stating the namespace for each
+use (std::cout << ...)?
+(a) When the namespace is std.
+(b) To allow the compiler to know what
+namespace a name comes from.
+(c) When you are writing a library for
+others to use.
+(d) When you will be using a name frequently.
+(e) You should always state the namespace (always do the latter option).
+(f) None of the above are true.
+
+20. Why aren’t header files compiled?
+(a) Because templates can’t be compiled
+directly.
+(b) Because any file ending with .hpp (or
+.h) will be refused by the compiler.
+(c) Because doing so would expose private information.
+(d) Because header file guards prevent
+them from being compiled.
+(e) Because they are already included
+where needed by implementation files.
+(f) All of the above are true.
+
+21. What does the break command do in gdb?
+(a) It sets a breakpoint.
+(b) It stops the program from accepting
+input.
+(c) It ends the innermost loop.
+(d) It causes the program to crash.
+(e) None of the above are correct.
+
+22. Why does the Google Style Guide recommend adding a trailing underscore character for data member names?
+(a) To allow getter and setter methods to
+have a similar name.
+(b) To make it clear which data members
+are private.
+(c) It doesn’t mandate the use of underscores.
+(d) Leading, not trailing, underscores
+should be used for all data members.
+(e) Underscores should only be used between words, not after them.
+(f) None of the above are true.
+
+23. What is the sole disadvantage of using the
+#pragma header guard instead of the traditional #ifndef guard?
+(a) It is not officially part of the language
+standard.
+(b) It only works if every file has a different name.
+(c) It does not prevent multiple declarations when the header is included
+multiple times.
+(d) It only works if every header file exclusively uses it instead of the traditional guard.
+
+24. The ls command shows you the contents of
+the current working directory. Which of the
+following does it NOT show?
+(a) Header files (like main.hpp)
+(b) Implementation files (like main.cpp)
+(c) Executable files (like a.out)
+(d) Child directory names
+(e) It shows all of the above that are
+present
+
+25. Which of the following is NOT a preprocessor statement?
+(a) #include <iostream>
+(b) #ifndef SOME_NAME
+(c) #pragma once
+(d) #define SOME_NAME
+(e) All of the above are preprocessor
+statements
+
+26. How do you determine which line of your
+code is causing a segmentation fault?
+(a) The runtime exception log will indicate the line that is causing the fault.
+(b) The error message indicates the line
+that is causing the fault.
+(c) The debugger will halt on the line
+that is causing the fault.
+(d) The compiler warning will indicate
+the line that is causing the fault.
+(e) The memory checker (Valgrind) will
+indicate the line that is causing the
+fault.
+
+27. What does this code output?
+for (unsigned i = 4; i >= 0; --i) {
+    std::cout << i;
+}
+(a) 3210
+(b) 43210
+(c) 321
+(d) 4321
+(e) None of the above
+
+28. With regard to style guides (including the
+Google Style Guide), what is the most important rule?
+(a) Be consistent with existing code
+(b) Class names should always be capitalized
+(c) You should never duplicate code
+(d) Opening braces must always be on
+their own line
+(e) Indentation must be two spaces in
+width
+
+29. When does the Google Style Guide NOT
+recommend having a trailing underscore after a data member name?
+(a) For data members of structs
+(b) For private data members
+(c) For data members that are const
+(d) For data members that don’t have accessors
+(e) It always recommends the underscore
+
+30. What does the following code output?
+string * func(
+    string * a,
+    string * b) {
+  if (*a > *b) return a;
+  return b;
+}
+int main() {
+  string a = "cat";
+  string b(a);
+  b[0] = ’b’;
+  cout << *func(&a, &b);
+}
+(a) Compiler Error
+(b) Run-time Error
+(c) bat
+(d) cab
+(e) cat
+(f) Impossible to say as the code causes
+undefined behavior.
+(g) aat
+
+31. What is the primary reason to write wellstyled code?
+(a) To make the code more readable to
+humans.
+(b) To make the code easier to write for
+humans.
+(c) To make the code faster to compile by
+computers.
+(d) To make the code faster to run by
+computers.
+(e) (c) and (d)
+(f) None of the above
+
+32. What primary motivation behind conforming to a style guide?
+(a) To facilitate legibility and consistency
+(b) To reduce compile time errors
+(c) To improve optimization (run time
+performance)
+(d) To reduce undefined behavior
+(e) To ensure that the code is valid according to the C++ standard
+
+33. Which of the following is the most important edict to follow when determining how
+to style your code?
+(a) Having the open brace on the same
+line as the if keyword
+(b) Strict conformance to the style guide
+(c) Making sure your multi-word names
+are written separated by underscores
+(d) Consistency with existing code
